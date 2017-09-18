@@ -56,6 +56,15 @@
 			<button onclick="btnclk1()" type="button" class="mui-btn mui-btn-primary ">
 				喂食
 			</button>
+			<button onclick="sendmsg()" type="button" class="mui-btn mui-btn-primary ">
+				短信通知
+			</button>
+			<button onclick="outdoorvoice()" type="button" class="mui-btn mui-btn-primary ">
+				离屋语音
+			</button>
+			<button onclick="temvoice()" type="button" class="mui-btn mui-btn-primary ">
+				温度超阈值语音
+			</button>
 			<!--<button onclick="btnclk0()" type="button" class="mui-btn mui-btn-success mui-btn-outlined">
 				关闭
 			</button>-->
@@ -96,8 +105,18 @@
 					console.log(data);
 				});
 			}
-			function btnclk0(){
-				mui.getJSON('http://119.29.201.31:3000/buttonclick0',function(data){
+			function sendmsg(){
+				mui.getJSON('http://119.29.201.31:3250/sendMsg',function(data){
+					console.log(data);
+				});
+			}
+			function outdoorvoice(){
+				mui.getJSON('http://119.29.201.31:3250/indoorVoice',function(data){
+					console.log(data);
+				});
+			}
+			function temvoice(){
+				mui.getJSON('http://119.29.201.31:3250/temVoice',function(data){
 					console.log(data);
 				});
 			}

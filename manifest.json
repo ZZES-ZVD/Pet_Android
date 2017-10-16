@@ -3,14 +3,14 @@
 	"id": "H5201A237",/*应用的标识，创建应用时自动生成，勿手动修改*/
 	"name": "爱宠之家",/*应用名称，程序桌面图标名称*/
 	"version": {
-		"name": "1.0.0",/*应用版本名称*/
+		"name": "1.8.1",/*应用版本名称*/
 		"code": "83"
 	},
 	"description": "爱宠之家",/*应用描述信息*/
 	"icons": {
 		"72": "icon.png"
 	},
-	"launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"launch_path": "login.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
 	"developer": {
 		"name": "",/*开发者名称*/
 		"email": "",/*开发者邮箱地址*/
@@ -191,56 +191,91 @@
 		}
 	},"fullscreen":false,
 	"dependencies":{
-	  "pages": {
-	    "pages/device1.html": {
-	      "href": "pages/device1.html",
-	      "resources": [
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "css/app.css",
-	        "js/mui.min.js",
-	        "libs/echarts.js"
-	      ],
-	      "priority": 0,
-	      "refer": []
-	    },
-	    "list.html": {
-	      "href": "list.html",
-	      "resources": [
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "js/mui.min.js",
-	        "imgs/zvd.png"
-	      ],
-	      "refer": [
-	        "pages/device1.html"
-	      ],
-	      "priority": 0
-	    },
-	    "index.html": {
-	      "href": "index.html",
-	      "resources": [
-	        "css/mui.min.css",
-	        "fonts/mui.ttf",
-	        "js/mui.min.js",
-	        "imgs/zvd.png"
-	      ],
-	      "refer": [
-	        "list.html",
-	        "pages/device1.html"
-	      ],
-	      "priority": 0
-	    }
-	  },
-	  "idle": {
-	    "resources": [
-	      "imgs/bg.png",
-	      "imgs/bg_1.png",
-	      "js/mui.js",
-	      "imgs/bg_2.png",
-	      "css/mui.css"
-	    ]
-	  }
+		"pages": {
+			"pages/device1.html": {
+				"href": "pages/device1.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js",
+					"libs/echarts.js",
+					"pages/device1_son.html"
+				],
+				"priority": 0,
+				"refer": []
+			},
+			"list.html": {
+				"href": "list.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"imgs/zvd.png",
+					"imgs/f0.jpg",
+					"imgs/1.png",
+					"imgs/f1.gif",
+					"imgs/0.png"
+				],
+				"refer": [
+					"pages/device1.html",
+					"pages/device2.html"
+				],
+				"priority": 0
+			},
+			"index.html": {
+				"href": "index.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"imgs/zvd.png",
+					"list.html"
+				],
+				"refer": [
+					"pages/device1.html"
+				],
+				"priority": 0
+			},
+			"pages/device2.html": {
+				"resources": [
+					"css/app.css",
+					"css/mui.min.css",
+					"libs/echarts.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pages/device1_son.html": {
+				"resources": [
+					"libs/echarts.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"login.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"imgs/zvd.png"
+				],
+				"refer": [
+					"index.html"
+				],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"imgs/bg.png",
+				"imgs/bg_1.png",
+				"js/mui.js",
+				"imgs/bg_2.png",
+				"css/mui.css"
+			]
+		}
 	},
 	"unpackage":[
 	  "imgs/bg.png",
